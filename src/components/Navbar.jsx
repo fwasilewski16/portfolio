@@ -58,7 +58,7 @@ export default function Navbar(props) {
 
   return (
     <nav className="fixed z-50 flex h-16 w-full flex-col items-center justify-center">
-      <div className="relative flex gap-2 rounded-lg border border-[#187fdd] bg-[#eef7ff] p-1 shadow-xl">
+      <div className="relative flex gap-2 rounded-full border border-[#187fdd] bg-[#eef7ff] p-1 shadow-xl">
         <NavbarButton
           name={"home"}
           text={props.sectionInView === "home" ? "text-white" : "text-black"}
@@ -93,7 +93,7 @@ export default function Navbar(props) {
           style={springProps}
           className="absolute flex h-10 w-20 items-center justify-center md:w-32"
         >
-          <div className="h-9 w-20 rounded-lg bg-[#187fdd] shadow-inner md:w-28" />
+          <div className="h-9 w-20 rounded-full bg-[#187fdd] shadow-inner md:w-28" />
         </animated.div>
       </div>
     </nav>

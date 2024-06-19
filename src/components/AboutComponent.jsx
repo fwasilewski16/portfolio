@@ -24,7 +24,7 @@ export default function AboutComponent(props) {
           src={face}
           className="mx-5 mb-8 w-72 rounded-xl object-cover brightness-105 md:mb-0"
         />
-        <div className="flex max-w-[500px] flex-col justify-center gap-8 px-5 text-center tracking-wide md:max-w-[450px] md:text-left">
+        <div className="flex max-w-[500px] flex-col justify-center gap-6 px-5 text-center tracking-wide md:max-w-[450px] md:text-left">
           <p className="font-medium">
             Hi, my name is Filip and I'm a self-taught full stack developer.
           </p>
