@@ -77,8 +77,8 @@ const toolsIcon = (
 const locationIcon = (
   <svg
     xmlns="http://www.w3.org/2000/svg"
-    width="45"
-    height="45"
+    width="30"
+    height="30"
     viewBox="0 0 24 24"
     fill="none"
     stroke="#187fdd"
@@ -98,8 +98,8 @@ const locationIcon = (
 const emailIcon = (
   <svg
     xmlns="http://www.w3.org/2000/svg"
-    width="45"
-    height="45"
+    width="30"
+    height="30"
     viewBox="0 0 24 24"
     fill="none"
     stroke="#187fdd"

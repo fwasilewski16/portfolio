@@ -38,11 +38,11 @@ const githubIcon = (
 export default function Footer() {
   return (
     <footer className="flex h-20 w-full justify-center bg-[#112c45]">
-      <div className="flex w-full max-w-[1100px] items-center justify-between">
-        <p className="font-poppins font-semibold text-white">
+      <div className="flex w-full max-w-[800px] items-center justify-between px-5 xl:max-w-[1200px]">
+        <p className="font-poppins text-sm font-semibold text-white">
           Copyright © 2024. All rights are reserved
         </p>
-        <div className="flex gap-8">
+        <div className="flex gap-4 xl:gap-8">
           {linkedInIcon}
           {githubIcon}
         </div>
