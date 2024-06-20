@@ -43,8 +43,15 @@ export default function Footer() {
           Copyright © 2024. All rights are reserved
         </p>
         <div className="flex gap-4 xl:gap-8">
-          {linkedInIcon}
-          {githubIcon}
+          <a
+            href={"https://www.linkedin.com/in/filip-wasilewski-845591145/"}
+            target="_blank"
+          >
+            {linkedInIcon}
+          </a>
+          <a href={"https://github.com/fwasilewski16"} target="_blank">
+            {githubIcon}
+          </a>
         </div>
       </div>
     </footer>

@@ -17,9 +17,20 @@ function ProjectComponent(props) {
               {description}
             </p>
           ))}
-          <button className="w-fit rounded-lg border border-black px-6 py-1 font-semibold">
-            <a>VISIT</a>
-          </button>
+          <div className="flex gap-4">
+            <button className="w-fit rounded-lg border border-black px-6 py-1 font-semibold hover:outline hover:outline-1">
+              <a href={props.link} target="_blank">
+                VISIT
+              </a>
+            </button>
+            {props.githubLink && (
+              <button className="w-fit rounded-lg border border-black px-6 py-1 font-semibold hover:outline hover:outline-1">
+                <a href={props.githubLink} target="_blank">
+                  REPOSITORY
+                </a>
+              </button>
+            )}
+          </div>
         </div>
         <div className="flex max-w-[100dvw] items-center md:max-w-[760px]">
           <img
@@ -43,8 +54,11 @@ export default function ProjectsComponent(props) {
   return (
     <section
       ref={props.projectsRef}
-      className="flex w-full flex-col items-center border-t border-black"
+      className="flex w-full flex-col items-center"
     >
+      <div className="w-full px-5">
+        <div className="mx-auto h-[1px] w-full max-w-[760px] bg-black xl:w-[1200px] xl:max-w-none" />
+      </div>
       <h2 className="my-14 font-poppins text-2xl font-medium md:text-4xl">
         My projects
       </h2>
@@ -57,6 +71,7 @@ export default function ProjectsComponent(props) {
             "It features an OAuth-protected admin dashboard that allows her to add, delete, and edit products. Product data is stored in MongoDB, and images are hosted on Google Firebase. Payments are processed via Stripe.",
             "The platform also utilizes the @emailjs/browser React library to handle email communication directly through the contact page and redux-persist to save cart content. The platform uses my back-end server to handle all database related requests and Stripe payments.",
           ]}
+          link={"https://riclae.art/"}
         />
         <ProjectComponent
           img={encore}
@@ -66,6 +81,8 @@ export default function ProjectsComponent(props) {
             "Users can follow their favorite artists and read live music-related blogs. The platform includes a search bar for finding events and artists by typing keywords. Additionally, it features a mock-up login system that allows users to log in, follow artists, and keep track of events.",
             "All live events are store in MongoDB and all requests are handled by my back-end server. The website is modeled closely after DICE and Songkick in terms of features.",
           ]}
+          link={"https://encore-music.netlify.app"}
+          githubLink={"https://github.com/fwasilewski16/ENCORE"}
         />
         <ProjectComponent
           img={dishPal}
@@ -74,6 +91,8 @@ export default function ProjectsComponent(props) {
             "DishPal is a mock-up website which allows users to get recipes based on ingredients which they already have. The recipes can be also filtered based on meal type, calories intake, preperation time, couisine type and diet type.",
             "The platform uses EDAMAM Api for search auto-fill and collecting recipes, react-spring library for all animation and redux-persist for saving recipes.",
           ]}
+          link={"https://dishpal.netlify.app"}
+          githubLink={"https://github.com/fwasilewski16/dishPal"}
         />
         <div className="group flex w-full justify-center font-poppins">
           <div className="flex flex-col-reverse gap-10 px-5 xl:flex-row xl:px-0">

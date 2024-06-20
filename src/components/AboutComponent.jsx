@@ -47,7 +47,6 @@ export default function AboutComponent(props) {
           <div className="flex flex-col items-center gap-6 md:w-1/3">
             {frontendIcon}
             <p className="font-poppins font-semibold">Front-End</p>
-            <div className="h-[1px] w-full bg-black" />
             <div className="flex w-full flex-wrap justify-center gap-3">
               <SkillsIcon src={"html"} name={"HMTL5"} />
               <SkillsIcon src={"css"} name={"CSS3"} />
@@ -60,7 +59,6 @@ export default function AboutComponent(props) {
           <div className="flex flex-col items-center gap-6 md:w-1/3">
             {backendIcon}
             <p className="font-poppins font-semibold">Back-End</p>
-            <div className="h-[1px] w-full bg-black" />
             <div className="flex w-full flex-wrap justify-center gap-3">
               <SkillsIcon src={"nodejs"} name={"Node.js"} />
               <SkillsIcon src={"express"} name={"Express"} />
@@ -71,7 +69,6 @@ export default function AboutComponent(props) {
           <div className="flex flex-col items-center gap-6 md:w-1/3">
             {toolsIcon}
             <p className="font-poppins font-semibold">Tools</p>
-            <div className="h-[1px] w-full bg-black" />
             <div className="flex w-full flex-wrap justify-center gap-3">
               <SkillsIcon src={"git"} name={"Git"} />
               <SkillsIcon src={"github"} name={"Github"} />

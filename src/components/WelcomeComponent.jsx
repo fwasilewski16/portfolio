@@ -43,7 +43,7 @@ export default function WelcomeComponent(props) {
   return (
     <section
       ref={props.welcomeRef}
-      className="relative flex min-h-[100dvh] flex-col items-center justify-center gap-7 bg-[#EEF7FF] font-poppins font-medium sm:gap-14"
+      className="relative flex min-h-[100svh] flex-col items-center justify-center gap-7 bg-[#EEF7FF] font-poppins font-medium sm:gap-14"
     >
       <div className="flex flex-col gap-2 text-center text-xl sm:text-3xl">
         <div className="flex items-center justify-center gap-2">
@@ -67,8 +67,15 @@ export default function WelcomeComponent(props) {
         <p>I'm a full-stack web developer.</p>
       </div>
       <div className="flex gap-4">
-        {linkedInIcon}
-        {githubIcon}
+        <a
+          href={"https://www.linkedin.com/in/filip-wasilewski-845591145/"}
+          target="_blank"
+        >
+          {linkedInIcon}
+        </a>
+        <a href={"https://github.com/fwasilewski16"} target="_blank">
+          {githubIcon}
+        </a>
       </div>
       <div className="flex flex-col items-center gap-5">
         <p className="text-xl">Tech stack:</p>
