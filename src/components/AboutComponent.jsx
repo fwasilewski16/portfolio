@@ -73,7 +73,6 @@ export default function AboutComponent(props) {
               <SkillsIcon src={"git"} name={"Git"} />
               <SkillsIcon src={"github"} name={"Github"} />
               <SkillsIcon src={"netlify"} name={"Netlify"} />
-              <SkillsIcon src={"vscode"} name={"Visual Studio Code"} />
               <SkillsIcon src={"postman"} name={"Postman"} />
               <SkillsIcon src={"firebase"} name={"Firebase"} />
             </div>
