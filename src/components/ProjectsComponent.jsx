@@ -67,7 +67,7 @@ export default function ProjectsComponent(props) {
           img={riclae}
           title={"Riclae.art"}
           description={[
-            "Riclae.art is an e-commerce platform I built for my girlfriend to sell her prints and paintings.",
+            "Riclae.art is an e-commerce platform I built for my client to sell their prints and paintings.",
             "It features an OAuth-protected admin dashboard that allows her to add, delete, and edit products. Product data is stored in MongoDB, and images are hosted on Google Firebase. Payments are processed via Stripe.",
             "The platform also utilizes the @emailjs/browser React library to handle email communication directly through the contact page and redux-persist to save cart content. The platform uses my back-end server to handle all database related requests and Stripe payments.",
           ]}
