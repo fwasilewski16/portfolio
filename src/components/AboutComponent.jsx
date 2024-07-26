@@ -54,6 +54,7 @@ export default function AboutComponent(props) {
               <SkillsIcon src={"react"} name={"React"} />
               <SkillsIcon src={"redux"} name={"Redux"} />
               <SkillsIcon src={"tailwind"} name={"Tailwind CSS"} />
+              <SkillsIcon src={"ts"} name={"TypeScript"} />
             </div>
           </div>
           <div className="flex flex-col items-center gap-6 md:w-1/3">
