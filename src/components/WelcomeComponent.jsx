@@ -8,7 +8,7 @@ function Icon(props) {
   return (
     <div className="group">
       <img
-        className="transition duration-200 ease-in-out group-hover:-translate-y-4"
+        className="h-10 transition duration-200 ease-in-out group-hover:-translate-y-4"
         src={props.src}
       />
     </div>
@@ -16,70 +16,64 @@ function Icon(props) {
 }
 
 export default function WelcomeComponent(props) {
-  const [colour, setColour] = useState(1);
-
   const isInView = useInView(props.welcomeRef, { amount: 0.5 });
-
-  useEffect(() => {
-    const timeout = setTimeout(() => {
-      setColour((prevColour) => {
-        if (prevColour === 13) {
-          return 1;
-        } else {
-          return prevColour + 1;
-        }
-      });
-    }, 1000);
-
-    return () => {
-      clearTimeout(timeout);
-    };
-  }, [colour]);
+  const [textVisible, setTextVisible] = useState(false);
 
   useEffect(() => {
     isInView && props.setSectionInView("home");
   }, [isInView]);
 
+  useEffect(() => {
+    setTimeout(() => {
+      setTextVisible(true);
+    }, 100);
+  }, []);
+
   return (
     <section
       ref={props.welcomeRef}
-      className="relative flex min-h-[100svh] flex-col items-center justify-center gap-7 bg-[#EEF7FF] font-poppins font-medium sm:gap-14"
+      className="font-lato relative flex min-h-[100dvh] flex-col items-center justify-center gap-7 bg-[#EEF7FF] tracking-wider sm:gap-14"
     >
       <div className="flex flex-col gap-2 text-center text-xl sm:text-3xl">
         <div className="flex items-center justify-center gap-2">
-          <p>Hi, I’m</p>
-          <div className="relative flex h-10 w-[180px] overflow-hidden rounded-lg sm:h-12 sm:w-[258px]">
-            <div
-              className={`absolute bottom-0 left-0 right-0 top-0 z-10 bg-[#187FDD] ${colour === 2 ? "translate-y-0" : "translate-y-full"} transition duration-300 ease-in-out`}
-            />
-            <div
-              className={`absolute bottom-0 left-0 right-0 top-0 z-10 bg-[#65FD8E] ${colour >= 4 && colour <= 6 ? "translate-y-0" : "-translate-y-full"} transition duration-500 ease-in-out`}
-            />
-            <div
-              className={`absolute bottom-0 left-0 right-0 top-0 z-10 bg-[#112C45] ${colour >= 8 && colour <= 12 ? "translate-x-0" : "-translate-x-[105%]"} transition duration-300 ease-in-out`}
-            />
-            <div className="absolute bottom-0 left-0 right-0 top-0 rounded-lg bg-[#51DFDB]" />
-            <div className="absolute bottom-0 left-0 right-0 top-0 flex items-center justify-center">
-              <p className="z-20 text-white">Filip Wasilewski</p>
-            </div>
+          <p
+            className={`${!textVisible ? "-translate-y-1/2 opacity-0" : "translate-y-0 opacity-100"} transition duration-[800ms]`}
+          >
+            Hi, I’m
+          </p>
+          <div
+            className={`relative flex h-10 w-[180px] items-center justify-center rounded-lg sm:h-12 sm:w-[245px] ${!textVisible ? "translate-y-1/3 opacity-0" : "translate-y-0 opacity-100"} bg-[#187FDD] transition delay-[800ms] duration-[800ms]`}
+          >
+            <p className="z-20 text-white">Filip Wasilewski</p>
           </div>
         </div>
-        <p>I'm a full-stack web developer.</p>
+        <p
+          className={`${!textVisible ? "translate-y-1/3 opacity-0" : "translate-y-0 opacity-100"} transition delay-[1600ms] duration-[800ms]`}
+        >
+          I'm a full-stack web developer.
+        </p>
       </div>
-      <div className="flex gap-4">
+      <div className="flex gap-5">
         <a
           href={"https://www.linkedin.com/in/filip-wasilewski-845591145/"}
           target="_blank"
+          className={`${!textVisible ? "-translate-x-1/3 opacity-0" : "translate-y-0 opacity-100"} transition delay-[2400ms] duration-[800ms]`}
         >
           {linkedInIcon}
         </a>
-        <a href={"https://github.com/fwasilewski16"} target="_blank">
+        <a
+          href={"https://github.com/fwasilewski16"}
+          target="_blank"
+          className={`${!textVisible ? "translate-x-1/3 opacity-0" : "translate-y-0 opacity-100"} transition delay-[2400ms] duration-[800ms]`}
+        >
           {githubIcon}
         </a>
       </div>
-      <div className="flex flex-col items-center gap-5">
-        <p className="text-xl">Tech stack:</p>
-        <div className="flex gap-3 px-5 md:gap-5">
+      <div
+        className={`flex flex-col items-center gap-8 ${!textVisible ? "translate-y-1/4 opacity-0" : "translate-y-0 opacity-100"} transition delay-[2400ms] duration-[800ms]`}
+      >
+        <p className="text-2xl">Tech stack:</p>
+        <div className="flex min-h-12 gap-3 px-5 md:gap-5">
           <Icon src={"https://skillicons.dev/icons?i=html"} />
           <Icon src={"https://skillicons.dev/icons?i=css"} />
           <Icon src={"https://skillicons.dev/icons?i=js"} />
@@ -89,7 +83,10 @@ export default function WelcomeComponent(props) {
           <Icon src={"https://skillicons.dev/icons?i=nodejs"} />
         </div>
       </div>
-      <img src={arrow} className="absolute bottom-0 h-10 animate-bounce" />
+      <img
+        src={arrow}
+        className={`absolute bottom-0 h-10 animate-bounce ${!textVisible ? "translate-y-full opacity-0" : "translate-y-0 opacity-100"} transition delay-[2400ms] duration-[800ms]`}
+      />
     </section>
   );
 }

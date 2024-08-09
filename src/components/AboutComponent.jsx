@@ -14,7 +14,7 @@ export default function AboutComponent(props) {
   return (
     <section
       ref={props.aboutRef}
-      className="flex w-full flex-col items-center font-poppins"
+      className="font-lato flex w-full flex-col items-center tracking-wider"
     >
       <h2 className="my-8 text-3xl font-medium md:my-14 md:text-4xl">
         About me
@@ -39,14 +39,14 @@ export default function AboutComponent(props) {
           <p className="text-sm">Based in London, UK.</p>
         </div>
       </div>
-      <h2 className="mb-8 font-poppins text-3xl font-medium md:mb-14 md:text-4xl">
+      <h2 className="font-lato mb-8 text-3xl font-medium md:mb-14 md:text-4xl">
         My skills
       </h2>
       <div className="mb-14 flex w-full justify-center px-5">
         <div className="flex w-[1000px] flex-col gap-8 md:flex-row md:gap-14">
           <div className="flex flex-col items-center gap-6 md:w-1/3">
             {frontendIcon}
-            <p className="font-poppins font-semibold">Front-End</p>
+            <p className="font-lato font-semibold">Front-End</p>
             <div className="flex w-full flex-wrap justify-center gap-3">
               <SkillsIcon src={"html"} name={"HMTL5"} />
               <SkillsIcon src={"css"} name={"CSS3"} />
@@ -59,7 +59,7 @@ export default function AboutComponent(props) {
           </div>
           <div className="flex flex-col items-center gap-6 md:w-1/3">
             {backendIcon}
-            <p className="font-poppins font-semibold">Back-End</p>
+            <p className="font-lato font-semibold">Back-End</p>
             <div className="flex w-full flex-wrap justify-center gap-3">
               <SkillsIcon src={"nodejs"} name={"Node.js"} />
               <SkillsIcon src={"express"} name={"Express"} />
@@ -69,7 +69,7 @@ export default function AboutComponent(props) {
           </div>
           <div className="flex flex-col items-center gap-6 md:w-1/3">
             {toolsIcon}
-            <p className="font-poppins font-semibold">Tools</p>
+            <p className="font-lato font-semibold">Tools</p>
             <div className="flex w-full flex-wrap justify-center gap-3">
               <SkillsIcon src={"git"} name={"Git"} />
               <SkillsIcon src={"github"} name={"Github"} />

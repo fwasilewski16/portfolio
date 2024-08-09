@@ -8,7 +8,7 @@ import { useEffect } from "react";
 
 function ProjectComponent(props) {
   return (
-    <div className="group flex w-full justify-center font-poppins">
+    <div className="font-lato group flex w-full justify-center tracking-wider">
       <div className="flex flex-col-reverse gap-10 px-5 xl:flex-row xl:px-0">
         <div className="flex max-w-[760px] flex-col gap-4 xl:max-w-[400px]">
           <h4 className="text-2xl font-medium">{props.title}</h4>
@@ -59,7 +59,7 @@ export default function ProjectsComponent(props) {
       <div className="w-full px-5">
         <div className="mx-auto h-[1px] w-full max-w-[760px] bg-black xl:w-[1200px] xl:max-w-none" />
       </div>
-      <h2 className="my-14 font-poppins text-2xl font-medium md:text-4xl">
+      <h2 className="font-lato my-14 text-2xl font-medium md:text-4xl">
         My projects
       </h2>
       <div className="my-10 flex flex-col gap-10 xl:gap-32">
@@ -94,7 +94,7 @@ export default function ProjectsComponent(props) {
           link={"https://dishpal.netlify.app"}
           githubLink={"https://github.com/fwasilewski16/dishPal"}
         />
-        <div className="group flex w-full justify-center font-poppins">
+        <div className="font-lato group flex w-full justify-center">
           <div className="flex flex-col-reverse gap-10 px-5 xl:flex-row xl:px-0">
             <div className="flex max-w-[760px] flex-col gap-4 xl:max-w-[400px]">
               <h4 className="text-2xl font-medium">Backend server</h4>

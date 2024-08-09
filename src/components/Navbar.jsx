@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 function NavbarButton(props) {
   return (
     <button
-      className={`z-50 h-10 w-20 font-poppins capitalize md:w-32 md:text-lg md:font-medium ${props.text} transition`}
+      className={`font-lato z-50 h-9 w-20 capitalize tracking-wider md:w-32 md:text-lg ${props.text} transition`}
       onClick={() => {
         props.disableAnimation();
         props.setSectionInView(props.name);
@@ -19,6 +19,7 @@ function NavbarButton(props) {
 export default function Navbar(props) {
   const [lockTimeout, setLockTimeout] = useState(null);
   const [screenWidth, setScreenWidth] = useState(window.innerWidth);
+  const [navbarVisible, setNavbarVisible] = useState(false);
 
   const [springProps, api] = useSpring(
     () => ({
@@ -47,6 +48,12 @@ export default function Navbar(props) {
   }, []);
 
   useEffect(() => {
+    setTimeout(() => {
+      setNavbarVisible(true);
+    }, 2400);
+  }, []);
+
+  useEffect(() => {
     props.sectionInView === "home" && api.start({ left: "0px" });
     props.sectionInView === "about" &&
       api.start({ left: screenWidth > 767 ? "128px" : "80px" });
@@ -57,8 +64,10 @@ export default function Navbar(props) {
   }, [props.sectionInView, screenWidth, api]);
 
   return (
-    <nav className="fixed z-50 flex h-16 w-full flex-col items-center justify-center">
-      <div className="relative flex overflow-hidden rounded-lg border border-[#187fdd] bg-[#eef7ff]">
+    <nav className="fixed z-50 flex h-24 w-full flex-col items-center justify-center">
+      <div
+        className={`relative flex overflow-hidden rounded-lg border border-[#187fdd] bg-[#eef7ff] ${navbarVisible ? "translate-y-0 opacity-100" : "-translate-y-1/2 opacity-0"} transition duration-[800ms]`}
+      >
         <NavbarButton
           name={"home"}
           text={props.sectionInView === "home" ? "text-white" : "text-black"}

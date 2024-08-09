@@ -17,11 +17,11 @@ export default function ContactComponent(props) {
       className="flex w-full flex-col items-center pb-14 md:pb-20"
     >
       <div className="w-full max-w-[800px] px-5 xl:max-w-[1200px] xl:px-0">
-        <h2 className="my-14 font-poppins text-2xl font-medium md:text-4xl">
+        <h2 className="font-lato my-14 text-2xl font-medium md:text-4xl">
           Contact me
         </h2>
         <div className="flex flex-col gap-5 md:flex-row">
-          <div className="flex items-center gap-5 pr-5 font-poppins tracking-wider">
+          <div className="font-lato flex items-center gap-5 pr-5 tracking-wider">
             <div className="rounded-full border-2 border-[#187fdd] p-2">
               {locationIcon}
             </div>
@@ -30,7 +30,7 @@ export default function ContactComponent(props) {
               <p className="text-lg">London, UK</p>
             </div>
           </div>
-          <div className="flex items-center gap-5 font-poppins tracking-wider md:px-5">
+          <div className="font-lato flex items-center gap-5 tracking-wider md:px-5">
             <div className="rounded-full border-2 border-[#187fdd] p-2">
               {emailIcon}
             </div>
