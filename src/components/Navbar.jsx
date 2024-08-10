@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 function NavbarButton(props) {
   return (
     <button
-      className={`font-lato z-50 h-9 w-20 capitalize tracking-wider md:w-32 md:text-lg ${props.text} transition`}
+      className={`z-50 h-8 w-20 font-lato text-sm uppercase tracking-wider sm:h-11 sm:text-base ${props.text} transition sm:w-32`}
       onClick={() => {
         props.disableAnimation();
         props.setSectionInView(props.name);
@@ -66,7 +66,7 @@ export default function Navbar(props) {
   return (
     <nav className="fixed z-50 flex h-24 w-full flex-col items-center justify-center">
       <div
-        className={`relative flex overflow-hidden rounded-lg border border-[#187fdd] bg-[#eef7ff] ${navbarVisible ? "translate-y-0 opacity-100" : "-translate-y-1/2 opacity-0"} transition duration-[800ms]`}
+        className={`relative flex overflow-hidden rounded-full border border-[#187FDD] bg-[rgba(255,255,255,0.60)] backdrop-blur-xl ${navbarVisible ? "translate-y-0 opacity-100" : "-translate-y-1/2 opacity-0"} transition duration-[800ms]`}
       >
         <NavbarButton
           name={"home"}
@@ -100,7 +100,7 @@ export default function Navbar(props) {
         />
         <animated.div
           style={springProps}
-          className="absolute flex h-10 w-20 items-center justify-center bg-[#187fdd] md:w-32"
+          className="absolute flex h-8 w-20 items-center justify-center rounded-full bg-[#187FDD] sm:h-11 sm:w-32"
         ></animated.div>
       </div>
     </nav>

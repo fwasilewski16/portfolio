@@ -5,7 +5,7 @@ import face from "../assets/face.webp";
 import { useInView } from "framer-motion";
 
 export default function AboutComponent(props) {
-  const isInView = useInView(props.aboutRef, { amount: 0.3 });
+  const isInView = useInView(props.aboutRef, { amount: 0.4 });
 
   useEffect(() => {
     isInView && !props.animationLocked && props.setSectionInView("about");
@@ -14,7 +14,7 @@ export default function AboutComponent(props) {
   return (
     <section
       ref={props.aboutRef}
-      className="font-lato flex w-full flex-col items-center tracking-wider"
+      className="flex w-full flex-col items-center font-lato tracking-wider"
     >
       <h2 className="my-8 text-3xl font-medium md:my-14 md:text-4xl">
         About me
@@ -39,7 +39,7 @@ export default function AboutComponent(props) {
           <p className="text-sm">Based in London, UK.</p>
         </div>
       </div>
-      <h2 className="font-lato mb-8 text-3xl font-medium md:mb-14 md:text-4xl">
+      <h2 className="mb-8 font-lato text-3xl font-medium md:mb-14 md:text-4xl">
         My skills
       </h2>
       <div className="mb-14 flex w-full justify-center px-5">

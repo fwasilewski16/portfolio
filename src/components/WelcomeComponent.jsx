@@ -16,7 +16,7 @@ function Icon(props) {
 }
 
 export default function WelcomeComponent(props) {
-  const isInView = useInView(props.welcomeRef, { amount: 0.5 });
+  const isInView = useInView(props.welcomeRef, { amount: 0.3 });
   const [textVisible, setTextVisible] = useState(false);
 
   useEffect(() => {
@@ -32,7 +32,7 @@ export default function WelcomeComponent(props) {
   return (
     <section
       ref={props.welcomeRef}
-      className="font-lato relative flex min-h-[100dvh] flex-col items-center justify-center gap-7 bg-[#EEF7FF] tracking-wider sm:gap-14"
+      className="relative flex min-h-[100dvh] flex-col items-center justify-center gap-7 bg-[#EEF7FF] font-lato tracking-wider sm:gap-14"
     >
       <div className="flex flex-col gap-2 text-center text-xl sm:text-3xl">
         <div className="flex items-center justify-center gap-2">
@@ -41,11 +41,12 @@ export default function WelcomeComponent(props) {
           >
             Hi, I’m
           </p>
-          <div
-            className={`relative flex h-10 w-[180px] items-center justify-center rounded-lg sm:h-12 sm:w-[245px] ${!textVisible ? "translate-y-1/3 opacity-0" : "translate-y-0 opacity-100"} bg-[#187FDD] transition delay-[800ms] duration-[800ms]`}
+
+          <p
+            className={`${!textVisible ? "translate-y-1/3 opacity-0" : "translate-y-0 opacity-100"} transition delay-[800ms] duration-[800ms]`}
           >
-            <p className="z-20 text-white">Filip Wasilewski</p>
-          </div>
+            Filip Wasilewski
+          </p>
         </div>
         <p
           className={`${!textVisible ? "translate-y-1/3 opacity-0" : "translate-y-0 opacity-100"} transition delay-[1600ms] duration-[800ms]`}
