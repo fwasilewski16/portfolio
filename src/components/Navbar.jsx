@@ -66,7 +66,7 @@ export default function Navbar(props) {
   return (
     <nav className="fixed z-50 flex h-24 w-full flex-col items-center justify-center">
       <div
-        className={`relative flex overflow-hidden rounded-full border border-[#187FDD] bg-[rgba(255,255,255,0.60)] backdrop-blur-xl ${navbarVisible ? "translate-y-0 opacity-100" : "-translate-y-1/2 opacity-0"} transition duration-[800ms]`}
+        className={`relative flex overflow-hidden rounded-full border border-[#187FDD] bg-[rgba(255,255,255,0.60)] backdrop-blur-xl ${navbarVisible ? "translate-y-0 opacity-100" : "-translate-y-1/2 opacity-0"} transition duration-500`}
       >
         <NavbarButton
           name={"home"}
